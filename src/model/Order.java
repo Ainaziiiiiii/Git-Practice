@@ -1,14 +1,17 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Order {
     private Long id;
-    private String items;
+    private List<OrderItem> items = new ArrayList<>();
     private String status;
 
     public Order() {
     }
 
-    public Order(Long id, String items, String status) {
+    public Order(Long id, List<OrderItem> items, String status) {
         this.id = id;
         this.items = items;
         this.status = status;
@@ -22,11 +25,11 @@ public class Order {
         this.id = id;
     }
 
-    public String getItems() {
+    public List<OrderItem> getItems() {
         return items;
     }
 
-    public void setItems(String items) {
+    public void setItems(List<OrderItem> items) {
         this.items = items;
     }
 
@@ -41,6 +44,11 @@ public class Order {
     public void addItems(OrderItem item) {
 
     }
+
+    public double getTotalPrise() {
+        return 0;
+    }
+
 
     @Override
     public String toString() {
