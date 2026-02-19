@@ -3,21 +3,22 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Order {
     private Long id;
     private List<OrderItem> items = new ArrayList<>();
-    private Consumer consumer;
+    private Customer consumer;
     private String status;
 
     public Order() {
     }
 
-    public Order(Long id, Consumer consumer) {
+    public Order(Long id, Customer consumer) {
         this.id = id;
         this.consumer = consumer;
     }
 
-    public Order(Long id, List<OrderItem> items, Consumer consumer, String status) {
+    public Order(Long id, List<OrderItem> items, Customer consumer, String status) {
         this.id = id;
         this.items = items;
         this.consumer = consumer;
@@ -48,11 +49,11 @@ public class Order {
         this.status = status;
     }
 
-    public Consumer getConsumer() {
+    public Customer getCustomer() {
         return consumer;
     }
 
-    public void setConsumer(Consumer consumer) {
+    public void setConsumer(Customer consumer) {
         this.consumer = consumer;
     }
 
