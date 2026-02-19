@@ -4,5 +4,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Student: Ali");
         System.out.println("Timur");
+        System.out.println("Subject -"+"Java");
     }
 }
