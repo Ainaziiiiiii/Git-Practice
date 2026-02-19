@@ -2,13 +2,13 @@ package model;
 
 import java.util.List;
 
-public class Consumer {
+public class Customer {
     private long id;
     private String name;
     private String email;
     private List<Order> orders;
 
-    public Consumer(long id, String name, String email, List<Order> orders) {
+    public Customer(long id, String name, String email, List<Order> orders) {
         this.id = id;
         this.name = name;
         this.email = email;
