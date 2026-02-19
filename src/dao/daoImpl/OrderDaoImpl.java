@@ -1,21 +1,22 @@
 package dao.daoImpl;
 
+
 import dao.OrderDao;
-import db.DataBase;
-import model.Consumer;
+import db.DataBaseOrder;
+import db.Database;
+import db.DatabaseCustomer;
 import model.Order;
 
-import javax.xml.crypto.Data;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static db.DataBase.orders;
+import static db.DataBaseOrder.orders;
+
 
 public class OrderDaoImpl implements OrderDao {
     @Override
     public void save(Order o) {
-        orders.add(o);
+       DataBaseOrder.orders.add(o);
     }
 
     @Override
@@ -35,7 +36,7 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public List<Order> findByCustomer(int customerId) {
         return orders.stream()
-                .filter(order -> order.getConsumer().getId() == customerId)
+                .filter(order -> order.getCustomer().getId()==customerId)
                 .toList();
     }
 

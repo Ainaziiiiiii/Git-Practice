@@ -1,6 +1,7 @@
 package dao;
 
-import database.Database;
+import db.Database;
+import db.DatabaseCustomer;
 import model.Customer;
 
 import java.util.ArrayList;
@@ -10,19 +11,19 @@ import java.util.Optional;
 public class CustomerDaoImpl implements CustomerDao {
     @Override
     public void save(Customer c) {
-        Database.customers.add(c);
+        DatabaseCustomer.customers.add(c);
 
     }
 
     @Override
     public List<Customer> findAll() {
 
-        return Database.customers;
+        return DatabaseCustomer.customers;
     }
 
     @Override
     public Optional<Customer> findById(int id) {
-        for (Customer c : Database.customers) {
+        for (Customer c : DatabaseCustomer.customers) {
             if (c.getId() == (id)) {
                 return Optional.of(c);
             }
@@ -33,7 +34,7 @@ public class CustomerDaoImpl implements CustomerDao {
     @Override
     public Optional<Customer> findByEmail(String email) {
         List<Customer> result = new ArrayList<>();
-        for (Customer c : Database.customers) {
+        for (Customer c : DatabaseCustomer.customers) {
             if (c.getEmail().equals(email)) ;
 
         }
@@ -42,7 +43,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public void update(Customer c) {
-        for (Customer customer : Database.customers) {
+        for (Customer customer : DatabaseCustomer.customers) {
             if (customer.getId() == c.getId()) {
                 customer.setName(c.getName());
                 customer.setEmail(c.getEmail());
@@ -54,9 +55,9 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public boolean delete(int id) {
-        for (Customer customer : Database.customers) {
+        for (Customer customer : DatabaseCustomer.customers) {
             if (customer.getId() == (id)) {
-                return Database.customers.remove(customer);
+                return DatabaseCustomer.customers.remove(customer);
             }
         }
         return false;
