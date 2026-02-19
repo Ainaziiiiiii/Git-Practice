@@ -13,6 +13,14 @@ public class Product {
         this.price = price;
         this.quantity = quantity;
         this.category = category;
+
+    }
+
+
+
+
+    public Product() {
+
     }
 
     public Long getId() {

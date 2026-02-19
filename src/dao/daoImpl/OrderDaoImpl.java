@@ -3,7 +3,7 @@ package dao.daoImpl;
 
 import dao.OrderDao;
 import db.DataBaseOrder;
-import db.Database;
+import db.DataBaseOrder;
 import db.DatabaseCustomer;
 import model.Order;
 
