@@ -71,10 +71,10 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", items='" + items +
-                ", status='" + status +
-                '}';
+        return "Order " +
+                "\nid=" + id +
+                "\nitems='" + items +
+                "\nstatus='" + status +
+                '\n';
     }
 }

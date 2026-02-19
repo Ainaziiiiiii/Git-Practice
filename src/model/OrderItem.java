@@ -34,9 +34,9 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return "OrderItem{" +
-                "product=" + product +
-                ", quantity=" + quantity +
-                '}';
+        return "OrderItem" +
+                "\nproduct=" + product +
+                "\nquantity=" + quantity +
+                '\n';
     }
 }
